@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sora:wght@100..800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main class="main-bg">
+        <div class="tdeeCalculadora">
+            <h1 class="titulo">Calculadora TDEE</h1>
+            <form class="formulario_main">
+                <div>
+                    <label for="sexo">Sexo</label>
+                    <select name="sexo" id="sexo" class="form_select">
+                        <option value="" disabled selected >Selecione</option>
+                        <option value="masculino">Masculino</option>
+                        <option value="feminino">Feminino</option>
+                    </select>
+                    <span class="erro"></span>
+                </div>
+                <div>
+                    <label for="idade">Idade</label>
+                    <input type="number" name="idade" id="idade" min="1">
+                    <span class="erro"></span>
+                </div>
+                <div>
+                    <label for="peso">Peso em Kg</label>
+                    <input type="text" name="peso" id="peso" min="1">
+                    <span class="erro"></span>
+                </div>
+                <div>
+                    <label for="altura">Altura em cm</label>
+                    <input type="number" name="altura" id="altura" min="1">
+                    <span class="erro"></span>
+                </div>
+                <div>
+                    <label for="atividade">Nivel atividade</label>
+                    <select for="atividade" name="atividade" id="form_select">
+                        <option value="" selected disabled>Selecione</option>
+                        <option value="1.2">Sedentario (Trabalho escritório)</option>
+                        <option value="1.375">Exercicio Leve (1-2 dias/semana)</option>
+                        <option value="1.55">Exercicio Moderado (3-5 dias/semana)</option>
+                        <option value="1.725">Exercicio Pesado (6-7 dias/semana)</option>
+                        <option value="1.9">Atleta (Exercicio 2x por dia)</option>
+                    </select>
+                    <span class="erro"></span>
+                </div>
+                <button class="btn">Calcular</button>
+            </form>
+            <p id="paragrafo">Seu gato de calorias estimado é de  <span id="tdee"></span> kcal por dia</p>
+        </div>
+    </main>
+    <script src="./js/script.js"></script>
+</body>
+</html>

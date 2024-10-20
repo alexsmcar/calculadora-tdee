@@ -1,0 +1,53 @@
+.main-bg {
+    max-width: 1000px;
+    padding-left: 30px;
+    padding-right: 30px;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+.titulo {
+    text-align: center;
+    font-family: "Sora";
+}
+
+.tdeeCalculadora {
+    padding: 30px;
+    border-radius: 8px;
+}
+
+.formulario_main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+
+}
+label span {
+    color: red;
+}
+
+.btn {
+    grid-column: span 2;
+    padding: 10px 0;
+    font-size: 1rem;
+    background-color: #25aad7;
+    font-family: "Roboto";
+    font-weight: 500;
+}
+
+#paragrafo {
+    margin-top: 10px;
+    opacity: 0;
+}
+#paragrafo.ativo {
+    opacity: 1;
+}
+
+.erro {
+    font-size: .75rem;
+    color: red;
+    margin-left: 15px;
+    margin-top: 5px;
+    height: .75rem;
+    display: block;
+}
