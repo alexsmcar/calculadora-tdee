@@ -1,7 +1,8 @@
 const form = document.querySelector(".formulario_main");
 const btn = document.querySelector(".btn");
-const paragrafo = document.getElementById("paragrafo")
+const calorias = document.querySelector(".calorias")
 const span = document.getElementById("tdee")
+
 function calculate(event) {
     event.preventDefault();
     if (checkInput()) {
@@ -10,10 +11,6 @@ function calculate(event) {
         const peso = form["peso"].value.replace(",",".");
         const altura = form["altura"].value;
         const atividade = form["atividade"].value;
-        console.log(peso)
-        if (isNaN(peso)) {
-            console.log("valor incorreto")
-        }
         function tdee() {
             const formula = (10 * (+peso) + 6.25 * (+altura) - 5 * (+idade));
             if (sexo === "masculino") {
@@ -36,13 +33,13 @@ function checkInput() {
         }
     });
     elements.forEach(element => {
-        const erro = element.nextElementSibling;
+        const mensagemErro = element.nextElementSibling;
         if (element.value.trim() === "") {
-            erro.innerText = "* Por favor, preencha este campo."
+            mensagemErro.innerText = "* Por favor, preencha este campo."
             isValid = false;
         }
         else {
-        erro.innerText = "";
+        mensagemErro.innerText = "";
         }
     })
     return isValid;
@@ -50,7 +47,7 @@ function checkInput() {
 
 function displayTdee(tdee) {
     span.innerText = tdee;
-    paragrafo.classList.add("ativo")
+    calorias.classList.add("ativo")
 }
 
 form.addEventListener("submit", calculate)

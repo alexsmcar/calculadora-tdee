@@ -14,12 +14,32 @@
 .tdeeCalculadora {
     padding: 30px;
     border-radius: 8px;
+    border: 2px solid black;
+}
+
+.calorias {
+    display: flex;
+    justify-content: center;
+    visibility: hidden;
+}
+.calorias.ativo {
+    visibility: visible;
+}
+
+#tdee {
+    font-size: 1.25rem;
+    display: inline-block;
+    font-weight: 500;
+}
+#paragrafo {
+    font-size: 1.125rem;
 }
 
 .formulario_main {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 10px;
+    margin-bottom: 20px;
 
 }
 label span {
@@ -29,21 +49,14 @@ label span {
 .btn {
     grid-column: span 2;
     padding: 10px 0;
-    font-size: 1rem;
-    background-color: #25aad7;
+    font-size: 1.125rem;
+    background-color: #16a34a;
     font-family: "Roboto";
     font-weight: 500;
+    color: #fff;
 }
 
-#paragrafo {
-    margin-top: 10px;
-    opacity: 0;
-}
-#paragrafo.ativo {
-    opacity: 1;
-}
-
-.erro {
+.mensagem_erro {
     font-size: .75rem;
     color: red;
     margin-left: 15px;

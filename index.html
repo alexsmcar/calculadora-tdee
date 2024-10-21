@@ -25,18 +25,18 @@
                 </div>
                 <div>
                     <label for="idade">Idade</label>
-                    <input type="number" name="idade" id="idade" min="1">
+                    <input autocomplete="off" type="number" name="idade" id="idade" min="1">
                     <span class="erro"></span>
                 </div>
                 <div>
                     <label for="peso">Peso em Kg</label>
-                    <input type="text" name="peso" id="peso" min="1">
-                    <span class="erro"></span>
+                    <input autocomplete="off" step="0.01" type="number" name="peso" id="peso" min="1">
+                    <span class="mensagem_erro"></span>
                 </div>
                 <div>
                     <label for="altura">Altura em cm</label>
-                    <input type="number" name="altura" id="altura" min="1">
-                    <span class="erro"></span>
+                    <input autocomplete="off" type="number" name="altura" id="altura" min="1">
+                    <span class="mensagem_erro"></span>
                 </div>
                 <div>
                     <label for="atividade">Nivel atividade</label>
@@ -48,11 +48,13 @@
                         <option value="1.725">Exercicio Pesado (6-7 dias/semana)</option>
                         <option value="1.9">Atleta (Exercicio 2x por dia)</option>
                     </select>
-                    <span class="erro"></span>
+                    <span class="mensagem_erro"></span>
                 </div>
                 <button class="btn">Calcular</button>
             </form>
-            <p id="paragrafo">Seu gato de calorias estimado é de  <span id="tdee"></span> kcal por dia</p>
+            <div class="calorias">
+                <p id="paragrafo">Seu gasto calórico estimado é de <span id="tdee"></span> kcal por dia</p>
+            </div>
         </div>
     </main>
     <script src="./js/script.js"></script>
